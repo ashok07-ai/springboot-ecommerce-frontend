@@ -6,6 +6,7 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Price</th>
       <th>Units in Stock</th>
@@ -14,9 +15,14 @@
 
   <tbody>
     <tr *ngFor="let datas of products">
+      <td>
+        <img src="{{ datas.imageUrl }}" height="80">
+      </td>
       <td>{{ datas.name }}</td>
       <td>{{ datas.unitPrice | currency:'USD' }}</td>
       <td>{{ datas.unitsInStock }}</td>
     </tr>
   </tbody>
 </table>
+
+
